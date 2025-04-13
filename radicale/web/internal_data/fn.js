@@ -125,8 +125,8 @@ const CollectionType = {
 
 function create_XMLHttpRequestWithAuth(method, url, user, password) {
     let request = new XMLHttpRequest();
-    request.setRequestHeader("Authorization", "Basic " + btoa(user + ":" + password));
     request.open(method, url, true);
+    request.setRequestHeader("Authorization", "Basic " + btoa(user + ":" + password));
     return request;
 }
 
